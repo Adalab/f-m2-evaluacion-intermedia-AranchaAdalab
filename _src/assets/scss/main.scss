@@ -1,7 +1,39 @@
 @import 'core/settings';
 
 body {
-	height: 100vh;
 	margin: 0;
-	background-color: $color-white;
+	background-color: rgb(167, 183, 199);
+	display: flex;
+	text-align: center;
+	justify-content: center;
+}
+
+.general {
+	display: flex;
+}
+
+h2 {
+	font-size: 18px;
+}
+
+.input {
+	margin: 15px;
+}
+
+.feedback {
+	color: blue;
+	border: solid 1px blue;
+	padding: 5px;
+	margin: 15px;
+}
+
+.counter {
+	color: rgb(103, 32, 136);
+	font-size: 42px;
+	margin-left: 50px;
+	margin-top: 18px;
+}
+
+.attempt {
+	font-style: italic;
 }
