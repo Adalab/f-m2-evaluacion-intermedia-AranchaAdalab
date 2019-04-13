@@ -6,6 +6,7 @@ const feedback = document.querySelector('.feedback');
 const counter = document.querySelector('.counter');
 const popup = document.querySelector('.popup');
 const reset = document.querySelector('.reset');
+const span = 'Escribe un número y dale a <span class="attempt">Prueba</span>';
 const randomNumber = getRandomNumber (100);
 console.log(`-- ${randomNumber}`);
 let i = 0;
@@ -53,8 +54,8 @@ function resetAll() {
     input.value = '';
     i = 0;
     counter.innerHTML = i;
-    feedback.innerHTML = feedback;
-    getRandomNumber (100); 
+    feedback.innerHTML = span; 
+    // getRandomNumber (100);
 }
 
-reset.addEventListener('click', resetAll);
+reset.addEventListener('click', resetAll, getRandomNumber);
