@@ -12,11 +12,16 @@ counter.innerHTML = i;
 function getRandomNumber(max) {
     return Math.ceil(Math.random() * max);
 }
-// console.log('>', randomNumber);
 
 function showNumber() {
     const numberInput = parseInt(input.value);
-    console.log (numberInput);
+    if (input.value === '') {
+        popup.classList.remove('hidden');
+        i = i-1;
+        counter.innerHTML = i;
+    } else {
+        popup.classList.add('hidden');
+    }
     if (numberInput < randomNumber && numberInput > 0) {
         feedback.innerHTML = 'Demasiado bajo';
     } else if (numberInput < randomNumber && numberInput < 0){
@@ -32,11 +37,11 @@ function showNumber() {
     counter.innerHTML = i;
 }
 
-function showPopup () {
-    if (input.value === '') {
-        popup.classList.remove('hidden');
-    }
-}
+button.addEventListener('click', showNumber);
 
-button.addEventListener('click', showPopup, showNumber);
+button.addEventListener('keyup',function(e){
+    if (e.keyCode === 13) {
+    showNumber;
+  }  
+});
 
