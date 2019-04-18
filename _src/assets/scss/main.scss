@@ -3,14 +3,16 @@
 body {
 	margin: 0;
 	background: linear-gradient(to bottom, pink, purple);
-	display: flex;
-	text-align: center;
-	justify-content: center;
 	height: 100vh;
 }
 
 .general {
-	display: flex;
+	width: 100vw;
+	text-align: center;
+	@media all and (min-width: 768px) {
+		display: flex;
+		justify-content: center;
+	}
 }
 
 h2 {
@@ -50,8 +52,10 @@ h2 {
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-around;
-	margin-left: 50px;
-	margin-top: 18px;
+	@media all and (min-width: 768px) {
+		margin-left: 50px;
+		margin-top: 18px;
+	}
 }
 
 .counter {
