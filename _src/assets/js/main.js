@@ -56,9 +56,6 @@ function resetAll() {
   counter.innerHTML = i;
   feedback.innerHTML = span;
   randomNumber = getRandomNumber(100);
-  console.log(randomNumber);
 }
 
 reset.addEventListener('click', resetAll);
-
-console.log(`-- ${randomNumber}`);
